@@ -1,0 +1,116 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../../assets/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('../../assets/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.characterCard {
+    background-color: #ECE4D9;
+    height: 550px; /* увеличенная высота для размещения всех элементов */
+    /* width: 450px; уменьшенная ширина для более компактного вида */
+    filter: drop-shadow(8px 4px 6px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+    position: absolute;
+}
+.characterCard:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
+}
+
+.characterPhoto {
+    height: 550px;
+    width: 450px;
+    position: relative; /* изменено с absolute */
+    margin: 0 auto;
+}
+
+.addButton {
+    border-radius: 0 0 30px 0;
+    background-color: #b52222;
+    height: 100px;
+    width: 100px;
+    position: absolute;
+    bottom: 20px;
+    right: 20px; /* фиксированное размещение кнопки */
+}
+
+.addIcon {
+    height: 100px;
+    width: 100px;
+    position: relative; /* изменено с absolute */
+    margin: 0;
+    padding: 0;
+    border-style: hidden;
+    outline: none;
+}
+
+.characterDescriptionCard {
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 121px;
+    width: 360px;
+    filter: drop-shadow(6px 7px 5px rgba(0, 0, 0, 0.5));
+    margin: 10px; /* центрирование */
+    position: absolute;
+}
+
+.characterDescriptionCardLow {
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 150px;
+    width: 280px;
+    filter: drop-shadow(6px 7px 5px rgba(0, 0, 0, 0.5));
+    left: 10px;
+    bottom: 10px; /* центрирование */
+    position: absolute;
+}
+
+.lineCharacter {
+    width: 340px;
+    border: 3px solid #af4e4e;
+    margin: 10px; /* центрирование линии */
+}
+
+.CharacterNameOnCard {
+    color: #000000;
+    text-align: left;
+    font-size: 30px;
+    position: relative; /* изменено с absolute */
+    margin-bottom: 5px;
+}
+
+.CharacterRaceOnCard {
+    color: #000000;
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 3px;
+    position: relative; /* изменено с absolute */
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.CharacterFeaturesOnCardHeader {
+    color: #000000;
+    text-align: left;
+    font-size: 24px;
+    letter-spacing: 3px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+.CharacterFeaturesOnCard {
+    width: 280px;
+    top: -10px;
+    color: #000000;
+    text-align: left;
+    letter-spacing: 1px;
+    position: relative;
+}

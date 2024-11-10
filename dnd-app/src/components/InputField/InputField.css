@@ -1,0 +1,28 @@
+.inputField {
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center the input field horizontally */
+    width: 800px;
+    margin: 0 auto; /* Center the inputField container */
+    position: relative;
+}
+
+.inputField > input {
+    background-color: #ECE4D9;
+    width: 100%;
+    height: 50px;
+    border: 2px solid black;
+    border-radius: 22px;
+    outline: none;
+    font-family: 'OpenSans Bold';
+    font-size: 100%;
+    padding-right: 40px; /* Оставляем место для иконки */
+}
+
+.searchIcon {
+    position: absolute;
+    right: 15px;
+    font-size: 18px;
+    color: #000;
+    cursor: pointer;
+}

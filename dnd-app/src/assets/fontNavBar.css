@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assets/openSans/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans';
+    src: url('./assets/openSans/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+body {
+    font-family: 'OpenSans', sans-serif;
+}
+
+.navbar-text-white {
+    font-family: 'OpenSans', sans-serif;
+    font-weight: bold;
+}

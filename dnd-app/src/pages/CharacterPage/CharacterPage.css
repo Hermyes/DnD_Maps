@@ -1,0 +1,170 @@
+.characterPageBackground {
+    background-color: #2A2928;
+    min-height: 120vh; /* Полная высота экрана */
+}
+
+/* Контейнер для всех карточек персонажей */
+.characterPageContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background-color: #2A2928;
+}
+
+/* Стили для карточек персонажей */
+.characterCardPage {
+    background-color: #ECE4D9;
+    height: 550px;
+    width: 450px;
+    margin-left: 20px;
+    filter: drop-shadow(8px 4px 6px rgba(0, 0, 0, 0.25));
+    overflow: hidden;
+}
+
+.characterPageDescriptionCard {
+    border-radius: 30px;
+    background-color: rgba(255, 255, 255, 0.8);
+    height: 80px;
+    width: 360px;
+    filter: drop-shadow(6px 7px 5px rgba(0, 0, 0, 0.5));
+    margin-left: 40px; /* центрирование */
+    margin-top: 10px;
+    position: absolute;
+}
+
+.CharacterPageNameOnCard {
+    color: #000000;
+    text-align: center;
+    font-size: 30px;
+    position: relative; /* изменено с absolute */
+    margin-bottom: 5px;
+}
+
+/* Стиль для фотографии персонажа*/
+.characterPagePhoto {
+    height: 550px;
+    width: 100%;
+    object-fit: fill;
+}
+
+/* Блок описания персонажа */
+.characterPageDescription {
+    padding: 15px;
+    color: #000;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    margin-top: -380px;
+    margin-left: 50px;
+}
+
+/* Основные характеристики (класс, раса) */
+.characterPageStats {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Линия под названием персонажа */
+.linePageCharacter {
+    width: 90%;
+    height: 3px;
+    background-color: #af4e4e;
+    margin: 0 auto;
+    margin-bottom: 15px;
+}
+
+/* Стиль для блока с навыками */
+.characterPageSkills {
+    font-size: 16px;
+    font-weight: bold;
+    background-color: rgba(240, 240, 240, 0.9);
+    padding: 10px;
+    border-radius: 10px;
+    margin-top: 15px;
+    text-align: left;
+}
+
+/* Стили для карточки расы и класса персонажа */
+.characterPageAndClassCard {
+    background-color: #ECE4D9;
+    height: 180px;
+    width: 450px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    margin-left: 20px;
+    margin-top: 20px; /* Расстояние между карточками */
+    display: flex;
+}
+
+.DetailCharacterRaceAndClassCardRaceAndClassHeader {
+    color: #000000;
+    text-align: left;
+    vertical-align: text-top;
+    font-size: 40px;
+    font-family: OpenSans Bold;
+    width: 156px;
+    height: 107px;
+    position: absolute;
+    letter-spacing: 3px;
+    line-height: auto;
+    border-style: hidden;
+    outline: none;
+    margin: 2%;
+}
+
+.DetailCharacterRaceAndClassCardClassValue {
+    color: #000000;
+    text-align: left;
+    vertical-align: text-top;
+    font-size: 40px;
+    width: 260px;
+    height: 55px;
+    position: absolute;
+    letter-spacing: 3px;
+    line-height: auto;
+    border-style: hidden;
+    outline: none;
+    margin-left: 40%;
+    font-family: OpenSans Reg;
+}
+
+.DetailCharacterRaceAndClassCardRaceValue {
+    color: #000000;
+    text-align: left;
+    vertical-align: text-top;
+    font-size: 40px;
+    width: 260px;
+    height: 150px;
+    position: absolute;
+    letter-spacing: 3px;
+    line-height: auto;
+    border-style: hidden;
+    outline: none;
+    margin-left: 40%;
+    margin-top: 11%;
+    font-family: OpenSans Reg;
+}
+
+
+.DetailCharacterArmorCard{
+    background-color:#ECE4D9;
+height:156px;
+width:156px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:30px;
+margin-left: 50px;
+position:relative;
+}
+
+.DetailCharacterHitsCard{
+    background-color:#ECE4D9;
+height:156px;
+width:156px;
+filter:drop-shadow(0px 4px 4px rgba(0,0,0,0.25));
+border-radius:30px;
+margin-left: -220px;
+position:relative;
+}

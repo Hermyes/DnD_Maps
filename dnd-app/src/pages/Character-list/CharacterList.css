@@ -1,0 +1,13 @@
+.background{
+    background-color: #2A2928;
+    height: 100%;
+}
+
+.CharactersCards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    position: relative;
+    padding-top: 10px; /* добавлено для смещения всех карточек */
+}

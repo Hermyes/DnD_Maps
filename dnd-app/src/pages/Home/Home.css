@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'OpenSans Reg';
+    src: url('../../assets/OpenSans-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'OpenSans Bold';
+    src: url('../../assets/OpenSans-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.background{
+    background-color: #2A2928;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.titleName{
+    margin-top: 1.5em;
+    display: flex;
+    justify-content: center;
+    font-family: 'OpenSans Bold';
+    color: #ECE4D9;
+}
+
+.underTitle {
+    display: flex;
+    justify-content: center;
+    font-family: 'OpenSans Reg';
+    color: #ECE4D9;
+    max-width: 600px;
+    word-break: break-word; 
+    white-space: normal; 
+    text-align: center;
+}
+
+.RowClass{
+    display: flex;
+    justify-content: center;
+}
