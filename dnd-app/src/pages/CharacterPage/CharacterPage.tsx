@@ -9,16 +9,16 @@ import { CHARACTERS_MOCK } from "../../modules/mock";
 import defaultImage from "./default.png";
 
 export const CharacterPage: FC = () => {
-    const [pageData, setPageDdata] = useState<CharacterInfo>();
+    const [characters, setCharacters] = useState<CharacterInfo>();
   
     const { character_id } = useParams();
 
     useEffect(() => {
         if (!character_id) return;
         getCharacterById(character_id)
-          .then((response) => setPageDdata(response))
+          .then((response) => setCharacters(response))
           .catch(() => {
-            setPageDdata(CHARACTERS_MOCK.characters.find((characters) => String(characters.character_id) == character_id))
+            setCharacters(CHARACTERS_MOCK.characters.find((characters) => String(characters.character_id) == character_id))
           })
       }, [character_id]);
 
@@ -28,10 +28,10 @@ export const CharacterPage: FC = () => {
                 <BreadCrumbs
             crumbs={[
             { label: ROUTE_LABELS.CHARACTERS, path: ROUTES.CHARACTERS },
-            { label: pageData?.name || "Персонаж" },
+            { label: characters?.name || "Персонаж" },
             ]}
         />
-            {pageData ? (
+            {characters ? (
             <div className=""> 
                 <div className="container text-center">
                 <div className="row">
@@ -39,11 +39,11 @@ export const CharacterPage: FC = () => {
                     <Card className="characterCardPage" style={{ borderRadius: '30px', backgroundColor: '#ECE4D9' }}> 
                     <div className="characterPageDescriptionCard">
                         <Card.Title className="CharacterPageNameOnCard" style={{ fontSize: '30px', margin: '10px', fontFamily: 'OpenSans Bold'}}>
-                            {pageData.name}
+                            {characters.name}
                         </Card.Title>
                         <div className ='lineCharacter'></div>
                     </div>
-                    <Image className="characterPagePhoto" src={pageData.photo_url || defaultImage} />            
+                    <Image className="characterPagePhoto" src={characters.photo_url || defaultImage} />            
                 </Card>
                     </div>
                     <div className="col-6 col-sm-4">
@@ -51,7 +51,7 @@ export const CharacterPage: FC = () => {
                         <div className="DetailCharacterArmorClassCardArmorClassIcon" style={{ position: 'relative', display: 'inline-block' }}>
                             <Image src='http://localhost:9000/dungeonsanddragonsphotos/shieldIcon.svg' width={150}/>
                             <p style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', margin: 0, fontSize: '50px', color: 'black' }}>
-                                {pageData.armor_class}
+                                {characters.armor_class}
                             </p>
                         </div>
                     </div>
@@ -61,7 +61,7 @@ export const CharacterPage: FC = () => {
                         <div className="DetailCharacterArmorClassCardArmorClassIcon" style={{ position: 'relative', display: 'inline-block' }}>
                             <Image src='http://localhost:9000/dungeonsanddragonsphotos/heartIcon.svg' width={150}/>
                             <p style={{ position: 'absolute', top: '50%', left: '50%', transform: 'translate(-50%, -50%)', margin: 0, fontSize: '50px', color: 'black' }}>
-                                {pageData.hit_points}
+                                {characters.hit_points}
                             </p>
                         </div>
                     </div>
@@ -76,8 +76,8 @@ export const CharacterPage: FC = () => {
                 }}>
                     <h2 className="DetailCharacterRaceAndClassCardRaceAndClassHeader">Класс:
                     Раса:</h2>
-                    <p className="DetailCharacterRaceAndClassCardClassValue">{ pageData.class_field}</p>
-                    <p className="DetailCharacterRaceAndClassCardRaceValue">{ pageData.race }</p>
+                    <p className="DetailCharacterRaceAndClassCardClassValue">{ characters.class_field}</p>
+                    <p className="DetailCharacterRaceAndClassCardRaceValue">{ characters.race }</p>
                 </Card>
                     </div>
                     <div className="col-6 col-sm-4">
@@ -90,9 +90,9 @@ export const CharacterPage: FC = () => {
                         width:'750px',
                     }}
                 >
-                    <p style={{fontFamily:'OpenSans Reg', textAlign: 'left'}}>{pageData.description}</p>
+                    <p style={{fontFamily:'OpenSans Reg', textAlign: 'left'}}>{characters.description}</p>
                     <h1 style={{fontFamily:'OpenSans Bold', fontSize:'25px', textAlign: 'left'}}>Особенности</h1>
-                    <p style={{fontFamily:'OpenSans Reg', textAlign: 'left'}}>{pageData.features}</p>
+                    <p style={{fontFamily:'OpenSans Reg', textAlign: 'left'}}>{characters.features}</p>
                 </Card>
                     </div>
                 </div>

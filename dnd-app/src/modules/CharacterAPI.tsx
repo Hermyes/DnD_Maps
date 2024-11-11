@@ -42,7 +42,7 @@ export const getCharacterById = async (
     character_id: number | string
 ): Promise<CharacterInfo> => {
     try {
-        const response = await fetch(`/api/characters/${character_id}`);
+        const response = await fetch(`/characters/${character_id}/`);
         if (!response.ok) {
             const text = await response.text();
             console.error("Error fetching character:", response.status, response.statusText);

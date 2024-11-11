@@ -7,7 +7,7 @@ import "./Home.css"
 
 export const Home: FC = () => {
   return (
-    <div className="background">
+    <div className="background" style={{height: '100vh'}}>
         <Container className="container">
         <Row className="RowClass">
             <Col md={10}>
