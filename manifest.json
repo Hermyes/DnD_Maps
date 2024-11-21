@@ -1,0 +1,15 @@
+{
+    "name": "DnD Mapd",
+    "short_name": "DnD Maps",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#fdfdfd",
+    "theme_color": "#db4938",
+    "orientation": "portrait-primary",
+    "icons": [
+      {
+        "src": "/RIP_Frontend/logo.svg",
+        "type": "image/png", "sizes": "192x192"
+      }
+    ]
+  }
