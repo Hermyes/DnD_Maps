@@ -21,7 +21,11 @@ const CharacterListPage: FC = () => {
             setCharacters(response.characters)
             setLoading(false)
         }).catch(() => {
-            setCharacters(CHARACTERS_MOCK.characters)
+            const resultCharacters = []
+                for (let i = 0; i < CHARACTERS_MOCK.characters.length; i++)
+                    if (CHARACTERS_MOCK.characters[i].name.toLowerCase().includes(searchValue.toLowerCase()))
+                        resultCharacters.push(CHARACTERS_MOCK.characters[i])
+            setCharacters(resultCharacters)
             setLoading(false)
         })
 }
