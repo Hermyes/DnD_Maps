@@ -12,7 +12,7 @@
 @media (max-width: 600px) {
     .CharactersCards {
         flex-direction: column;
-        gap: 0.5em; /* уменьшено для мобильных устройств */
-        padding-top: 0.5em; /* уменьшено для мобильных устройств */
+        gap: 0.5em; 
+        padding-top: 0.5em; 
     }
 }

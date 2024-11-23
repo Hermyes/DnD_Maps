@@ -40,7 +40,7 @@
 /* Стиль для фотографии персонажа*/
 .characterPagePhoto {
     height: 34.375em;
-    width: 22.125em;
+    width: 28.125em;
     object-fit: fill;
     position:absolute; 
 }
@@ -142,6 +142,10 @@
     width: 100%;
     height: 34.375em;
    }
+
+   .characterPagePhoto{
+    width: 100%;
+}
 
     .characterPageDescriptionCard {
      width: 20.5em;

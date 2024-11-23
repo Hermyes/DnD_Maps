@@ -28,19 +28,19 @@
     cursor: pointer;
 }
 
-/* Media query for smaller screens */
+
 @media (max-width: 600px) {
     .inputField {
-        width: 70%; /* Full width on smaller screens */
+        width: 70%; 
     }
 
     .inputField > input {
-        height: 2.5em; /* Adjust height for smaller screens */
-        font-size: 0.875em; /* Adjust font-size for smaller screens */
+        height: 2.5em; 
+        font-size: 0.875em; 
     }
 
     .searchIcon {
-        right: 0.625em; /* Adjust icon position for smaller screens */
-        font-size: 1em; /* Adjust icon size for smaller screens */
+        right: 0.625em; 
+        font-size: 1em; 
     }
 }

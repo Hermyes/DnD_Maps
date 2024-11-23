@@ -9,24 +9,39 @@ import { ROUTE_LABELS } from '../../Routes';
 import { CHARACTERS_MOCK } from '../../modules/mock';
 import './CharacterList.css';
 import NavbarComponent from '../../components/NavigationBar/NavigationBar';
+import { setCharacterNameAction, useCharacterName } from '../../slices/dataSlice';
+import { useDispatch } from 'react-redux';
+
+
 
 const CharacterListPage: FC = () => {
     const [searchValue, setSearchValue] = useState('');
     const [characters, setCharacters] = useState<CharacterInfo[]>([]);
     const [loading, setLoading] = useState(false);
 
+    const CharacterName = useCharacterName()
+
+    const dispatch = useDispatch()
+
     const handleSearch = async () => {
+        dispatch(setCharacterNameAction(searchValue))
         setLoading(true);
         getCharactersByName(searchValue).then((response) => {
             setCharacters(response.characters)
             setLoading(false)
         }).catch(() => {
-            setCharacters(CHARACTERS_MOCK.characters)
+            const resultCharacters = []
+                for (let i = 0; i < CHARACTERS_MOCK.characters.length; i++)
+                    if (CHARACTERS_MOCK.characters[i].name.toLowerCase().includes(searchValue.toLowerCase()))
+                        resultCharacters.push(CHARACTERS_MOCK.characters[i])
+            setCharacters(resultCharacters)
             setLoading(false)
         })
+        
 }
 
     useEffect(() => {
+        setSearchValue(CharacterName)
         handleSearch(); // По умолчанию загружаем персонажей при первой загрузке страницы
     }, []);
 

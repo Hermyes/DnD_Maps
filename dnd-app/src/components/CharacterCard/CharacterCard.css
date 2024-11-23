@@ -82,7 +82,7 @@
 .CharacterNameOnCard {
     color: #000000;
     text-align: left;
-    font-size: 30px !important; 
+    font-size: 28px !important; 
     margin: 10px !important;
     font-family: OpenSans Bold !important;
     position: relative;
@@ -95,7 +95,7 @@
     letter-spacing: 0.1875em; /* 3px */
     position: relative;
     margin-bottom: 0.2em; /* 10px */
-    font-size: 25px !important; 
+    font-size: 24px !important; 
     margin: 10px !important;
     font-family: OpenSans Reg !important;
 }
