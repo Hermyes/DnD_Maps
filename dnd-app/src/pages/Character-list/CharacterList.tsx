@@ -9,13 +9,22 @@ import { ROUTE_LABELS } from '../../Routes';
 import { CHARACTERS_MOCK } from '../../modules/mock';
 import './CharacterList.css';
 import NavbarComponent from '../../components/NavigationBar/NavigationBar';
+import { setCharacterNameAction, useCharacterName } from '../../slices/dataSlice';
+import { useDispatch } from 'react-redux';
+
+
 
 const CharacterListPage: FC = () => {
     const [searchValue, setSearchValue] = useState('');
     const [characters, setCharacters] = useState<CharacterInfo[]>([]);
     const [loading, setLoading] = useState(false);
 
+    const CharacterName = useCharacterName()
+
+    const dispatch = useDispatch()
+
     const handleSearch = async () => {
+        dispatch(setCharacterNameAction(searchValue))
         setLoading(true);
         getCharactersByName(searchValue).then((response) => {
             setCharacters(response.characters)
@@ -28,9 +37,11 @@ const CharacterListPage: FC = () => {
             setCharacters(resultCharacters)
             setLoading(false)
         })
+        
 }
 
     useEffect(() => {
+        setSearchValue(CharacterName)
         handleSearch(); // По умолчанию загружаем персонажей при первой загрузке страницы
     }, []);
 
