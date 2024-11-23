@@ -7,7 +7,8 @@ export interface CharacterInfo {
     features: string,
     hit_points: number,
     armor_class: number,
-    photo_url: string, 
+    photo_url: string,
+    mockImg?: string, 
 }
 
 export interface characterResult {

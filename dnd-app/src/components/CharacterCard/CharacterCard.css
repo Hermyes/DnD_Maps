@@ -13,12 +13,12 @@
 }
 
 .characterCard {
-    background-color: #ECE4D9;
-    height: 550px; /* увеличенная высота для размещения всех элементов */
-    /* width: 450px; уменьшенная ширина для более компактного вида */
-    filter: drop-shadow(8px 4px 6px rgba(0, 0, 0, 0.25));
+    background-color: #ECE4D9 !important;
+    height: 34.375em; /* 550px */
+    filter: drop-shadow(0.5em 0.25em 0.375em rgba(0, 0, 0, 0.25));
     overflow: hidden;
-    position: absolute;
+    width: 22em !important;
+    border-radius: 30px !important;
 }
 .characterCard:hover {
     transform: scale(1.05);
@@ -26,26 +26,26 @@
 }
 
 .characterPhoto {
-    height: 550px;
-    width: 450px;
-    position: relative; /* изменено с absolute */
+    height: 34.375em; /* 550px */
+    width: 22em; /* 450px */
+    position: relative;
     margin: 0 auto;
 }
 
 .addButton {
-    border-radius: 0 0 30px 0;
+    border-radius: 0 0 1.875em 0; /* 30px */
     background-color: #b52222;
-    height: 100px;
-    width: 100px;
+    height: 6.25em; /* 100px */
+    width: 6.25em; /* 100px */
     position: absolute;
-    bottom: 20px;
-    right: 20px; /* фиксированное размещение кнопки */
+    bottom: 1.25em; /* 20px */
+    right: 1.25em; /* 20px */
 }
 
 .addIcon {
-    height: 100px;
-    width: 100px;
-    position: relative; /* изменено с absolute */
+    height: 6.25em; /* 100px */
+    width: 6.25em; /* 100px */
+    position: relative;
     margin: 0;
     padding: 0;
     border-style: hidden;
@@ -53,64 +53,73 @@
 }
 
 .characterDescriptionCard {
-    border-radius: 30px;
+    border-radius: 1.875em; /* 30px */
     background-color: rgba(255, 255, 255, 0.8);
-    height: 121px;
-    width: 360px;
-    filter: drop-shadow(6px 7px 5px rgba(0, 0, 0, 0.5));
-    margin: 10px; /* центрирование */
+    height: 7.5625em; /* 121px */
+    width: 20.5em; /* 360px */
+    filter: drop-shadow(0.375em 0.4375em 0.3125em rgba(0, 0, 0, 0.5));
+    margin: 0.625em; /* 10px */
     position: absolute;
 }
 
 .characterDescriptionCardLow {
-    border-radius: 30px;
+    border-radius: 1.875em; /* 30px */
     background-color: rgba(255, 255, 255, 0.8);
-    height: 150px;
-    width: 280px;
-    filter: drop-shadow(6px 7px 5px rgba(0, 0, 0, 0.5));
-    left: 10px;
-    bottom: 10px; /* центрирование */
+    height: 9.375em; /* 150px */
+    width: 20.5em; /* 280px */
+    filter: drop-shadow(0.375em 0.4375em 0.3125em rgba(0, 0, 0, 0.5));
+    left: 0.625em; /* 10px */
+    bottom: 0.625em; /* 10px */
     position: absolute;
 }
 
 .lineCharacter {
-    width: 340px;
-    border: 3px solid #af4e4e;
-    margin: 10px; /* центрирование линии */
+    width: 19.25em; /* 340px */
+    border: 0.1875em solid #af4e4e; /* 3px */
+    margin: 0.625em; /* 10px */
 }
 
 .CharacterNameOnCard {
     color: #000000;
     text-align: left;
-    font-size: 30px;
-    position: relative; /* изменено с absolute */
-    margin-bottom: 5px;
+    font-size: 30px !important; 
+    margin: 10px !important;
+    font-family: OpenSans Bold !important;
+    position: relative;
+    margin-bottom: 0.3125em; /* 5px */
 }
 
 .CharacterRaceOnCard {
     color: #000000;
     text-align: left;
-    font-size: 24px;
-    letter-spacing: 3px;
-    position: relative; /* изменено с absolute */
-    margin: 10px;
-    margin-bottom: 10px;
+    letter-spacing: 0.1875em; /* 3px */
+    position: relative;
+    margin-bottom: 0.2em; /* 10px */
+    font-size: 25px !important; 
+    margin: 10px !important;
+    font-family: OpenSans Reg !important;
 }
 
 .CharacterFeaturesOnCardHeader {
     color: #000000;
     text-align: left;
-    font-size: 24px;
-    letter-spacing: 3px;
     position: relative;
-    margin-bottom: 5px;
+    font-size: 20px !important; 
+    margin: 10px !important;
+    font-family: OpenSans Bold !important;
 }
 
 .CharacterFeaturesOnCard {
-    width: 280px;
-    top: -10px;
+    width: 17.5em; /* 280px */
+    top: -0.625em; /* -10px */
     color: #000000;
     text-align: left;
-    letter-spacing: 1px;
     position: relative;
+    font-size: 18px !important; 
+    margin: 10px !important;
+    font-family: OpenSans Reg !important;
+    
+}
+
+@media (max-width: 768px) {
 }

@@ -28,3 +28,20 @@
 .breadcrumbs li:last-child {
     color: var(--active_color);
 }
+
+
+@media (max-width: 600px) {
+    .breadcrumbs {
+        align-items: flex-start;
+        margin-left: 20px; /* Adjust this value as needed */
+        padding: 10px;
+    }
+
+    .breadcrumbs li {
+        margin-bottom: 5px;
+    }
+
+    .breadcrumbs li:last-child {
+        margin-bottom: 0;
+    }
+}

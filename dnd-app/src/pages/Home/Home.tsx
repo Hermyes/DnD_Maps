@@ -3,11 +3,13 @@ import { FC } from "react";
 // import { ROUTES } from "../../Routes";
 import { Col, Container, Row } from "react-bootstrap";
 import "./Home.css"
+import NavbarComponent from "../../components/NavigationBar/NavigationBar";
 
 
 export const Home: FC = () => {
   return (
     <div className="background" style={{height: '100vh'}}>
+        <NavbarComponent />
         <Container className="container">
         <Row className="RowClass">
             <Col md={10}>

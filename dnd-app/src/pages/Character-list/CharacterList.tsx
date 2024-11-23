@@ -1,6 +1,5 @@
 import { FC, useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { Row, Col, Container, Spinner } from 'react-bootstrap';
+import { Container, Spinner } from 'react-bootstrap';
 
 import { CharacterInfo, getCharactersByName } from '../../modules/CharacterAPI';
 import InputField from '../../components/InputField/InputField';
@@ -9,6 +8,7 @@ import { BreadCrumbs } from '../../components/BreadCrumbs/BreadCrumbs';
 import { ROUTE_LABELS } from '../../Routes';
 import { CHARACTERS_MOCK } from '../../modules/mock';
 import './CharacterList.css';
+import NavbarComponent from '../../components/NavigationBar/NavigationBar';
 
 const CharacterListPage: FC = () => {
     const [searchValue, setSearchValue] = useState('');
@@ -33,7 +33,7 @@ const CharacterListPage: FC = () => {
     
     return (
         <div className='background'>
-        <div className="character-page">
+        <NavbarComponent />
         <BreadCrumbs crumbs={[{ label: ROUTE_LABELS.CHARACTERS }]} />
             <InputField 
             value={searchValue}
@@ -46,17 +46,12 @@ const CharacterListPage: FC = () => {
             {loading && <div className="loadingBg"><Spinner animation="border" /></div>}
 
             {/* Контейнер с карточками персонажей */}
-            <Container className="card-container">
-            <Row md={3} className="g-4 justify-content-center w-100" style={{marginTop: '10px'}}>
-                {characters.map((character, index) => (
-                <Col key={index}>
+            <Container className="d-flex flex-wrap container-fluid g-4 justify-content-center w-100 gap-4 mt-5">
+                {characters.map((character) => (
                     <CharacterCard {...character} />
-                </Col>
                 ))}
-            </Row>
             </Container>
-        </div>
-        </div>    
+        </div>  
     );
 };
 

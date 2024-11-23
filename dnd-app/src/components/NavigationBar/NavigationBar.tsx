@@ -1,9 +1,11 @@
 import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
+// import Nav from 'react-bootstrap/Nav';
 import { ROUTES } from '../../Routes';
 import { Image } from 'react-bootstrap';
 import '../../assets/fontNavBar.css';
+import {Link} from 'react-router-dom';
+
 
 const navbarStyle = {
   backgroundColor: '#212121',
@@ -11,17 +13,19 @@ const navbarStyle = {
 
 function NavbarComponent() {
   return (
-    <Navbar style={navbarStyle} expand="lg" variant='dark'>
+    <Navbar style={navbarStyle} expand="lg" variant="dark">
       <Container>
-        <Navbar.Brand href={ROUTES.HOME} className="navbar-text-white">
-            <Image src='http://localhost:9000/dungeonsanddragonsphotos/logo.svg' width={30}/>
-            DnD Maps
-        </Navbar.Brand>
+        <Link to={ROUTES.HOME} className="navbar-brand navbar-text-white">
+          <Image src="/RIP_Frontend/logo.png" width={30} />
+          DnD Maps
+        </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="me-auto">
-            <Nav.Link href={ROUTES.CHARACTERS} className="navbar-text-white">Персонажи</Nav.Link>
-          </Nav>
+          <div className="me-auto">
+            <Link to={ROUTES.CHARACTERS} className="nav-link navbar-text-white" style={{color: "#ECE4D9"}}>
+              Персонажи
+            </Link>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>

@@ -2,7 +2,8 @@
     display: flex;
     align-items: center;
     justify-content: center; /* Center the input field horizontally */
-    width: 800px;
+    width: 90%; /* Use percentage for responsive width */
+    max-width: 800px; /* Maintain max width for larger screens */
     margin: 0 auto; /* Center the inputField container */
     position: relative;
 }
@@ -10,19 +11,36 @@
 .inputField > input {
     background-color: #ECE4D9;
     width: 100%;
-    height: 50px;
-    border: 2px solid black;
-    border-radius: 22px;
+    height: 3.125em; /* Use em for height */
+    border: 0.125em solid black; /* Use em for border */
+    border-radius: 1.375em; /* Use em for border-radius */
     outline: none;
     font-family: 'OpenSans Bold';
-    font-size: 100%;
-    padding-right: 40px; /* Оставляем место для иконки */
+    font-size: 1em; /* Use em for font-size */
+    padding-right: 2.5em; /* Оставляем место для иконки */
 }
 
 .searchIcon {
     position: absolute;
-    right: 15px;
-    font-size: 18px;
+    right: 0.9375em; /* Use em for positioning */
+    font-size: 1.125em; /* Use em for font-size */
     color: #000;
     cursor: pointer;
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+    .inputField {
+        width: 70%; /* Full width on smaller screens */
+    }
+
+    .inputField > input {
+        height: 2.5em; /* Adjust height for smaller screens */
+        font-size: 0.875em; /* Adjust font-size for smaller screens */
+    }
+
+    .searchIcon {
+        right: 0.625em; /* Adjust icon position for smaller screens */
+        font-size: 1em; /* Adjust icon size for smaller screens */
+    }
 }
