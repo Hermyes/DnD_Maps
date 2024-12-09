@@ -9,6 +9,7 @@ export interface CharacterInfo {
     armor_class: number,
     photo_url: string,
     mockImg?: string, 
+    mode?: string,
 }
 
 export interface characterResult {

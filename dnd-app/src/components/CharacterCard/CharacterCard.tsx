@@ -1,5 +1,5 @@
 import { FC } from 'react';
-import { Card, Image } from 'react-bootstrap';
+import { Button, Card, Image } from 'react-bootstrap';
 import './CharacterCard.css';
 import defaultImage from './default.png';
 import { Link } from 'react-router-dom';
@@ -16,30 +16,36 @@ interface CharacterCardProps {
     armor_class: number,
     photo_url: string,
     mockImg?: string,
+    addToMap: () => void,
 }
 
-const CharacterCard: FC<CharacterCardProps> = ({ character_id, name, race, features, photo_url, mockImg }) => {
+const CharacterCard: FC<CharacterCardProps> = ({ character_id, name, race, features, addToMap, photo_url, mockImg}) => {
+
+
     return (
-        <Link to={`${ROUTES.CHARACTERS}/${character_id}`} className="characterCardLink" style={{ textDecoration: 'none' }}>
+        
         <Card className="characterCard"> 
-            <Image className="characterPhoto" src={photo_url || mockImg || defaultImage} />            
+        <Link to={`${ROUTES.CHARACTERS}/${character_id}`} className="characterCardLink" style={{ textDecoration: 'none' }}>
             <div className="characterDescriptionCard">
-            <Card.Title className="CharacterNameOnCard">
-                {name}
-            </Card.Title>
-            <div className ='lineCharacter'></div>
-            <Card.Text className="CharacterRaceOnCard">{race}</Card.Text>
+                <Card.Title className="CharacterNameOnCard">
+                    {name}
+                </Card.Title>
+                <div className ='lineCharacter'></div>
+                <Card.Text className="CharacterRaceOnCard">{race}</Card.Text>
             </div>
+            <Image className="characterPhoto" src={photo_url || mockImg || defaultImage} />            
+            
             
             <div className="characterDescriptionCardLow">
             <Card.Text className="CharacterFeaturesOnCardHeader">Особенности:</Card.Text>
             <Card.Text className="CharacterFeaturesOnCard">{features}</Card.Text>
             </div>
-            {/* <Button className="addButton">
-            <span className="addIcon">+</span>
-            </Button> */}
-        </Card>
         </Link>
+        <Button  className='addButton' variant='primary' onClick={() => addToMap()}>
+            <Image src="/RIP_Frontend/plusIcon.png" width={30} />
+        </Button>
+        </Card>
+       
     );
 }; 
 

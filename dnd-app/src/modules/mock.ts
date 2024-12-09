@@ -11,8 +11,7 @@ export const CHARACTERS_MOCK: characterResult = {
                 "features": "Божественное здоровье, Аура сопротивления магии",
                 "hit_points": 120,
                 "armor_class": 18,
-                "photo_url": "",
-                "mockImg": "/RIP_Frontend/mockImages/DragonBait.png"
+                "photo_url": "/RIP_Frontend/mockImages/DragonBait.png"
             },
             {
                 "character_id": 7,
@@ -23,8 +22,7 @@ export const CHARACTERS_MOCK: characterResult = {
                 "features": "1500 рун, осколок воина кувшина",
                 "hit_points": 100,
                 "armor_class": 10,
-                "photo_url": "",
-                "mockImg": "/RIP_Frontend/mockImages/7.png"
+                "photo_url": "/RIP_Frontend/mockImages/7.png"
             },
             {
                 "character_id": 1,
@@ -35,8 +33,7 @@ export const CHARACTERS_MOCK: characterResult = {
                 "features": "Кольцо влияния на животных, тактика стаи",
                 "hit_points": 32,
                 "armor_class": 11,
-                "photo_url": "",
-                "mockImg": "/RIP_Frontend/mockImages/1.png"
+                "photo_url": "/RIP_Frontend/mockImages/1.png"
             },
             {
                 "character_id": 6,
@@ -47,8 +44,7 @@ export const CHARACTERS_MOCK: characterResult = {
                 "features": "Иммунитет почти ко всему виду урона и состоянию",
                 "hit_points": 615,
                 "armor_class": 25,
-                "photo_url": "",
-                "mockImg": "/RIP_Frontend/mockImages/Tiamat.png"
+                "photo_url": "/RIP_Frontend/mockImages/Tiamat.png"
             },
             {
                 "character_id": 2,
@@ -59,8 +55,7 @@ export const CHARACTERS_MOCK: characterResult = {
                 "features": "Заклинатель 9 уровня.",
                 "hit_points": 75,
                 "armor_class": 15,
-                "photo_url": "",
-                "mockImg": "/RIP_Frontend/mockImages/BastianTarmandr.png"
+                "photo_url": "/RIP_Frontend/mockImages/BastianTarmandr.png"
             },
         ],
         "CharacterOnMapID": "",

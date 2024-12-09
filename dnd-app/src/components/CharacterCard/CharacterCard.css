@@ -33,13 +33,15 @@
 }
 
 .addButton {
-    border-radius: 0 0 1.875em 0; /* 30px */
-    background-color: #b52222;
-    height: 6.25em; /* 100px */
-    width: 6.25em; /* 100px */
+    border-radius: 0 0 1.875em 0 !important; /* 30px */
+    border-color: transparent !important;
+    border: none !important;
+    background-color: #b52222 !important;
+    height: 4em; /* 100px */
+    width: 4em; /* 100px */
     position: absolute;
-    bottom: 1.25em; /* 20px */
-    right: 1.25em; /* 20px */
+    bottom: 0px; /* 20px */
+    right: 0px; /* 20px */
 }
 
 .addIcon {
@@ -60,13 +62,14 @@
     filter: drop-shadow(0.375em 0.4375em 0.3125em rgba(0, 0, 0, 0.5));
     margin: 0.625em; /* 10px */
     position: absolute;
+    z-index: 100;
 }
 
 .characterDescriptionCardLow {
     border-radius: 1.875em; /* 30px */
     background-color: rgba(255, 255, 255, 0.8);
     height: 9.375em; /* 150px */
-    width: 20.5em; /* 280px */
+    width: 17em; /* 280px */
     filter: drop-shadow(0.375em 0.4375em 0.3125em rgba(0, 0, 0, 0.5));
     left: 0.625em; /* 10px */
     bottom: 0.625em; /* 10px */
@@ -80,7 +83,7 @@
 }
 
 .CharacterNameOnCard {
-    color: #000000;
+    color: #000000 !important;
     text-align: left;
     font-size: 28px !important; 
     margin: 10px !important;
@@ -110,12 +113,12 @@
 }
 
 .CharacterFeaturesOnCard {
-    width: 17.5em; /* 280px */
+    width: 15em; /* 280px */
     top: -0.625em; /* -10px */
     color: #000000;
     text-align: left;
     position: relative;
-    font-size: 18px !important; 
+    font-size: 17px !important; 
     margin: 10px !important;
     font-family: OpenSans Reg !important;
     

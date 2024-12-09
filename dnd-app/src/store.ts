@@ -1,5 +1,7 @@
+
 import { combineReducers, configureStore } from "@reduxjs/toolkit"
 import dataReducer from "./slices/dataSlice"
+
 
 export const store = configureStore({
     reducer: combineReducers({
@@ -8,3 +10,4 @@ export const store = configureStore({
 })
 
 export type RootState = ReturnType<typeof store.getState>
+export type AppDispatch = typeof store.dispatch;

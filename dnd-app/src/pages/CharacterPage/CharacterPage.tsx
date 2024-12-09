@@ -3,21 +3,27 @@ import { FC, useEffect, useState } from "react";
 import { BreadCrumbs } from "../../components/BreadCrumbs/BreadCrumbs";
 import { ROUTES, ROUTE_LABELS } from "../../Routes";
 import { useParams } from "react-router-dom";
-import { CharacterInfo, getCharacterById } from "../../modules/CharacterAPI";
 import { Image } from "react-bootstrap";
 import { CHARACTERS_MOCK } from "../../modules/mock";
 import defaultImage from "./default.png";
 import NavbarComponent from "../../components/NavigationBar/NavigationBar";
+import { Character } from "../../api/Api";
+import {fetchCharacter} from '../../slices/dataSlice'
+import { unwrapResult } from '@reduxjs/toolkit';
+import { useAppDispatch } from '../../slices/dataSlice';
 
 export const CharacterPage: FC = () => {
-    const [characters, setCharacters] = useState<CharacterInfo>();
+    const dispatch = useAppDispatch()
+
+    const [characters, setCharacters] = useState<Character>();
   
     const { character_id } = useParams();
 
     useEffect(() => {
         if (!character_id) return;
-        getCharacterById(character_id)
-          .then((response) => setCharacters(response))
+        dispatch(fetchCharacter(character_id)).then(unwrapResult)
+          .then((data) => 
+            setCharacters(data))
           .catch(() => {
             setCharacters(CHARACTERS_MOCK.characters.find((characters) => String(characters.character_id) == character_id))
           })
@@ -39,7 +45,7 @@ export const CharacterPage: FC = () => {
                 <div className="flex-column d-flex gap-3 characterPageWrapper2">
                     <div className="characterCardPage">
                         <div className="characterPagePhoto" >
-                            <Image className="characterPagePhoto" src={characters?.photo_url || characters?.mockImg || defaultImage} />
+                            <Image className="characterPagePhoto" src={characters?.photo_url || defaultImage} />
                         </div>
                         <div className="characterPageDescriptionCard">
                             <div className="CharacterPageNameOnCard">

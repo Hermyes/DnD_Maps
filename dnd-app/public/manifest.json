@@ -8,7 +8,7 @@
     "orientation": "portrait-primary",
     "icons": [
       {
-        "src": "/RIP_Frontend/logo.svg",
+        "src": "/RIP_Frontend/logo.png",
         "type": "image/png", "sizes": "192x192"
       }
     ]

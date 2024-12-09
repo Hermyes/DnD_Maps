@@ -1,0 +1,90 @@
+.AuthPageBackground{
+    background-color: #2A2928;
+    height: 100vh; /* Полная высота экрана */
+    width: 100%;
+    padding-bottom: 15%;
+}
+
+.AuthCardWrapper{
+    margin-top: 7%;
+}
+
+.AuthTitle{
+    font-size: 40px;
+    vertical-align: bottom;
+    color: #ECE4D9;
+    font-family: 'OpenSans Bold';
+}
+
+.AuthCard{
+    background-color: #ECE4D9;
+    height: auto;
+    width: 60vh;
+    border-radius: 30px;
+    filter: drop-shadow(0.5em 0.25em 0.375em rgba(0, 0, 0, 0.25));
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    gap: 1em;
+}
+
+.AuthCardTitle{
+    text-align: center;
+    font-size: 25px;
+    color: #000000;
+    font-family: 'OpenSans Bold';
+}
+
+.AuthCardInput{
+    background-color: transparent !important;
+    border: 2px solid #000000 !important;
+    border-radius: 30px !important;
+}
+
+.cardButton{
+    background-color: #af4e4e !important;
+    color: #ECE4D9;
+    border-radius: 30px;
+    bottom: none !important;
+    font-size: 20px !important;
+    font-family: 'OpenSans Bold' !important;
+    
+}
+
+@media (max-width: 768px) {
+    .AuthCard {
+        width: 80vw;
+        padding: 15px;
+    }
+
+    .AuthTitle {
+        font-size: 30px;
+    }
+
+    .AuthCardTitle {
+        font-size: 20px;
+    }
+
+    .cardButton {
+        font-size: 18px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .AuthCard {
+        width: 90vw;
+        padding: 10px;
+    }
+
+    .AuthTitle {
+        font-size: 25px;
+    }
+
+    .AuthCardTitle {
+        font-size: 18px;
+    }
+
+    .cardButton {
+        font-size: 16px !important;
+    }
+}

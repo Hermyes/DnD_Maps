@@ -1,0 +1,217 @@
+.MapsCards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: left;
+    margin-top: 20px;
+    gap: 2em;
+    padding-left: 5em;
+}
+
+.MapsCard{
+    width: 630px;
+    height: 460px;
+    background-color: #ECE4D9;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.MapsCard {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.MapsCard:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.mapName{
+    font-family: 'OpenSans Bold';
+    font-size: 24px;
+    color: #5C5C5C;
+    width: 430px;
+}
+
+.mapStatus{
+    font-family: 'OpenSans Bold';
+    font-size: 20px;
+    border-radius: 15px;
+    color: #ffffff;
+    padding: 5px 10px;
+}
+
+
+
+.redLineMaps{
+    height: 1px !important;
+    background-color: #AF4E4E;
+    margin: 5px 0 !important;
+}
+
+.status-draft {
+    background-color: #a8a8a8; /* Серый */
+  }
+  
+  .status-rejected {
+    background-color: #af4e4e; /* Красный */
+  }
+  
+  .status-formed {
+    background-color: #f0c929; /* Желтый */
+  }
+  
+  .status-completed {
+    background-color: #4caf50; /* Зеленый */
+  }
+  
+  .status-default {
+    background-color: #d3d3d3; /* Нейтральный серый */
+  }
+
+.gapper{
+    gap: 7em;
+}
+
+.mapCreator{
+    font-size: 30px;
+    font-family: 'OpenSans Bold';
+    color: #000000;
+    margin-top: 0;
+}
+
+
+.dateCreatedBox{
+    background-color: #A2A2A2;
+    width: 235px;
+    height: 90px;
+    font-size: 18px;
+    font-family: 'OpenSans Bold';
+    vertical-align: middle !important;
+    align-items: center !important;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.dateFormatedBox{
+    background-color: #E8E051;
+    width: 235px;
+    height: 90px;
+    font-size: 18px;
+    font-family: 'OpenSans Bold';
+    vertical-align: middle !important;
+    align-items: center !important;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.dateCompletedBox{
+    background-color: #7CC859;
+    width: 235px;
+    height: 90px;
+    font-size: 18px;
+    font-family: 'OpenSans Bold';
+    vertical-align: middle !important;
+    align-items: center !important;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.mapModerator{
+    font-size: 30px;
+    font-family: 'OpenSans Bold';
+    color: #000000;
+    margin-top: 1em;
+}
+
+.mapModeratorValue{
+    font-size: 20px;
+    font-family: 'OpenSans Bold';
+    color: #000000;
+    margin-top: 0;
+}
+
+.mapRatingWrapper{
+    display: flex;
+    gap: 1em;
+    margin-top: 1em;
+}
+
+.mapRatingImage{
+    width: 80px;
+    height: 80px;
+}
+
+.mapRating{
+    font-size: 60px;
+    font-family: 'OpenSans Bold';
+    color: #000000;
+    margin-top: 0;
+}
+
+.mapLink{
+    text-decoration: none;
+    color: inherit;
+}
+
+
+@media (max-width: 768px) {
+    .flexColumner{
+        flex-direction: column;
+    }
+
+    .MapsCard {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+    }
+
+    .mapName {
+        font-size: 16px;
+        width: 80%;
+    }
+
+    .mapStatus {
+        font-size: 12px;
+        padding: 3px 7px;
+    }
+
+    .dateCreatedBox,
+    .dateFormatedBox,
+    .dateCompletedBox {
+        width: 100%;
+        height: auto;
+        font-size: 16px;
+        padding: 10px;
+    }
+
+    .mapCreator,
+    .mapModerator,
+    .mapModeratorValue,
+    .mapRating {
+        font-size: 20px;
+    }
+
+    .mapRatingImage {
+        width: 50px;
+        height: 50px;
+    }
+
+    .MapsCards {
+        padding-left: 1em;
+        gap: 1em;
+    }
+
+    .gapper {
+        gap: 1em;
+    }
+}

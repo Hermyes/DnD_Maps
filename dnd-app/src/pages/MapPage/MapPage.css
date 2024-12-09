@@ -1,0 +1,70 @@
+.background {
+    background-color: #2A2928;
+    min-height: 100vh;
+    padding-bottom: 2em;
+}
+
+.npcLabel {
+    font-size: 24px;
+    font-family: 'OpenSans Bold';
+    color: #FFFFFF;
+    /* margin-left: 1.5em; */
+}
+
+
+
+
+.MapSaveWrapper{
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    /* justify-content: flex; */
+    margin-left: 2em;
+    gap: 1em;
+}
+
+.MapNameInput{
+    width: 24em !important;
+    height: 3em;
+    font-size: 20px;
+    font-family: 'OpenSans Bold';
+    color: #FFFFFF;
+    background-color: #2A2928;
+    border: 1px solid #FFFFFF;
+    border-radius: 5px;
+    
+}
+
+
+.characteronmapwrapper{
+    padding: 0px;
+    /* margin-left: 3em !important; */
+    gap: 1em !important;
+}
+
+.fixerNado{
+    padding: 0 !important; /* Уменьшить внутренние отступы */
+    margin-left: 5em !important; /* Уменьшить внешние отступы */
+    gap: 1em !important;
+
+}
+
+.gapper2{
+    gap: 1em !important;
+}
+
+.MapSaveButton{
+    background-color: #98A678 !important;
+    color: #ffffff !important;
+    font-family: 'OpenSans Bold' !important;
+    font-size: 16px !important;
+    height: 50px;
+}
+
+.MapDeleteButton{
+    background-color: #AF4E4E !important;
+    color: #ffffff !important;
+    font-family: 'OpenSans Bold' !important;
+    font-size: 16px !important;
+    height: 50px;
+}
