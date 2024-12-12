@@ -7,6 +7,7 @@ import { useEffect } from "react";
 import { invoke } from "@tauri-apps/api/core";
 
 
+
 function App() {
   useEffect(() => {
     invoke('tauri', {cmd: 'create'})
@@ -24,9 +25,9 @@ function App() {
 
 
   return (
-    <Router basename="/RIP_Frontend">
+    <Router>
       
-      <Routes>
+      <Routes >
         <Route path={ROUTES.HOME} index element={<Home />} />
         <Route path={ROUTES.CHARACTERS} element={<CharactersListPage />} />
         <Route path={`${ROUTES.CHARACTERS}/:character_id`} element={<CharacterPage />} />

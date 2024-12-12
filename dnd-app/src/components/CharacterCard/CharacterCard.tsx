@@ -5,6 +5,7 @@ import defaultImage from './default.png';
 import { Link } from 'react-router-dom';
 import { ROUTES } from '../../Routes';
 
+
 interface CharacterCardProps {
     character_id: number,
     name: string,

@@ -2,14 +2,20 @@
   "$schema": "../node_modules/@tauri-apps/cli/config.schema.json",
   "productName": "dnd-app",
   "version": "0.1.0",
-  "identifier": "com.tauri.dev",
+  "identifier": "me.hermyes",
   "build": {
-    "frontendDist": "../build",
-    "devUrl": "http://localhost:3000",
+    "frontendDist": "../dist",
+    "devUrl": "http://192.168.2.63:3000",
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build"
   },
+  "plugins": {
+    "http": {
+          "enabled": true
+        }
+  },
   "app": {
+    "withGlobalTauri": true,
     "windows": [
       {
         "title": "DnD Maps",
