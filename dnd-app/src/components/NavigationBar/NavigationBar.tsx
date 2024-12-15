@@ -25,7 +25,7 @@ function NavbarComponent() {
     <Navbar style={navbarStyle} expand="lg" variant="dark">
       <Container>
         <Link to={ROUTES.HOME} className="navbar-brand navbar-text-white">
-          <Image src="/RIP_Frontend/logo.png" width={30} />
+          <Image src="http://localhost:9000/dungeonsanddragonsphotos/logo.png" width={30} />
           DnD Maps
         </Link>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />

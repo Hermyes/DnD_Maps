@@ -66,7 +66,7 @@ const MapsPage: FC = () => {
                             <div className="mapModeratorValue">{map.moderator || "Не модерировано"}</div>
 
                             <div className="mapRatingWrapper">
-                                <img src={'/RIP_Frontend/ratingIcon.png'} alt="Рейтинг карты" className="mapRatingImage" />
+                                <img src={'http://localhost:9000/dungeonsanddragonsphotos/ratingIcon.png'} alt="Рейтинг карты" className="mapRatingImage" />
                                 <div className="mapRating">{map.rating || "-"}</div>
                             </div>
                         </Link>

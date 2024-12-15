@@ -27,7 +27,7 @@ const InputField: FC<Props> = ({ value, setValue, onSubmit, placeholder }) => {
                 onKeyPress={handleKeyPress}
             />
             <span className="searchIcon" onClick={onSubmit}>
-            <img src='/RIP_Frontend/searchIcon.png' width={30} alt="logo"/>
+            <img src='http://localhost:9000/dungeonsanddragonsphotos/searchIcon.png' width={30} alt="logo"/>
             </span>
         </div>
     );

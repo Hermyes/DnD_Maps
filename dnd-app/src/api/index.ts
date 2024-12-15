@@ -1,6 +1,6 @@
 import { Api } from './Api';
 
 export const api = new Api({
-    baseURL: 'http://127.0.0.1:3000/api',
+    baseURL: 'http://192.168.1.33:3000/api', // менять когда меняешь вайфай
     withCredentials: true
 });

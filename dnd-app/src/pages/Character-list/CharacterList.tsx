@@ -89,7 +89,7 @@ const CharacterListPage: FC = () => {
 
             <Link to={countCharactersOnMap()}>
                 <Button className="btnMap" variant="outline-warning">
-                        <Image className='btnImage' src='/RIP_Frontend/mapIcon.png' width={100} />
+                        <Image className='btnImage' src='http://localhost:9000/dungeonsanddragonsphotos/mapIcon.png' width={100} />
                         <div className='CharacterCount' hidden={CharacterOnMapCount == 0}>{CharacterOnMapCount}</div>
                 </Button>
             </Link>

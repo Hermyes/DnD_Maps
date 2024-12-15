@@ -29,7 +29,7 @@ function App() {
 
 
   return (
-    <Router basename="/RIP_Frontend">
+    <Router>
       
       <Routes>
         <Route path={ROUTES.HOME} index element={<Home />} />

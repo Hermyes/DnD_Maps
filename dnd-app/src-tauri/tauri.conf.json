@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "identifier": "com.example.dndapp",
   "build": {
-    "frontendDist": "../build",
-    "devUrl": "http://localhost:3000",
+    "frontendDist": "../dist",
+    "devUrl": "http://192.168.1.33:3000", 
     "beforeDevCommand": "npm run dev",
     "beforeBuildCommand": "npm run build"
   },

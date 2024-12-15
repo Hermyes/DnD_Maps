@@ -64,7 +64,7 @@ const RegPage: FC = () => {
             <NavbarComponent />
                 <div className="d-flex flex-column align-items-center gap-3 RegCardWrapper">
                     <div className="AuthTitle">
-                        <img src="/RIP_Frontend/logo.png" width={60} alt="DnD Maps Logo" />
+                        <img src="http://localhost:9000/dungeonsanddragonsphotos/logo.png" width={60} alt="DnD Maps Logo" />
                         <span>
                         DnD Maps
                         </span>

@@ -42,7 +42,7 @@ const CharacterCard: FC<CharacterCardProps> = ({ character_id, name, race, featu
             </div>
         </Link>
         <Button  className='addButton' variant='primary' onClick={() => addToMap()}>
-            <Image src="/RIP_Frontend/plusIcon.png" width={30} />
+            <Image src="http://localhost:9000/dungeonsanddragonsphotos/plusIcon.png" width={30} />
         </Button>
         </Card>
        
