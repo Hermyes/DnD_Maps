@@ -10,7 +10,7 @@ export default defineConfig({
     host: '0.0.0.0',
     proxy: {
       "/api": {
-        target: "http://192.168.1.33:8000", // менять когда меняешь вайфай
+        target: "http://172.20.10.3:8000", // менять когда меняешь вайфай
         changeOrigin: true,
         rewrite: (path) => path.replace(/^\/api/, ""),
       }
